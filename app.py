@@ -457,8 +457,7 @@ else:
     st.sidebar.markdown("---")
     st.sidebar.subheader("📈 SPC 설정")
     n_unique = df_count[n_col_c].nunique()
-    spc_type = st.sidebar.selectbox("관리도 종류",
-                                     ["NP","P"] if n_unique <= 1 else ["P","NP","C","U"])
+    spc_type = st.sidebar.selectbox("관리도 종류", ["NP","P","C","U"])
 
     df_long, sg_col, val_col = None, None, None
     LSL, USL = 0.0, 1.0
